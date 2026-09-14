@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Free online text formatting tool for cleaning messy text, removing extra spaces, and fixing unnecessary line breaks.">
+
+    <title>Free Text Formatting Tool</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin: 0 0 12px;
+        }
+
+        h2 {
+            margin-top: 35px;
+            margin-bottom: 12px;
+        }
+
+        .intro {
+            text-align: center;
+            color: #6b7280;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 180px;
+            padding: 15px;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            resize: vertical;
+            font-family: monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            outline: none;
+        }
+
+        textarea:focus {
+            border-color: #6366f1;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        button {
+            flex: 1;
+            padding: 13px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #111827;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .secondary {
+            background: #e5e7eb;
+            color: #111827;
+        }
+
+        .copy-btn {
+            width: 100%;
+            margin-top: 12px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .feature {
+            padding: 18px;
+            background: #f9fafb;
+            border-radius: 10px;
+        }
+
+        .feature strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .steps {
+            padding-left: 20px;
+        }
+
+        .website {
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 1px solid #e5e7eb;
+            text-align: center;
+            color: #6b7280;
+        }
+
+        .website a {
+            color: #4f46e5;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .website a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #9ca3af;
+            font-size: 14px;
+        }
+
+        @media (max-width: 650px) {
+            .card {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="card">
+
+            <h1>Free Text Formatting Tool</h1>
+
+            <p class="intro">
+                Clean and organize messy text in seconds. This simple tool
+                helps remove unnecessary spaces, fix line breaks, and make
+                copied text easier to read.
+            </p>
+
+
+            <!-- Text Formatting Tool -->
+
+            <textarea id="inputText" placeholder="Paste your messy text here...">
+        </textarea>
+
+            <div class="buttons">
+
+                <button onclick="formatText()">
+                    Format Text
+                </button>
+
+                <button class="secondary" onclick="clearText()">
+                    Clear
+                </button>
+
+            </div>
+
+            <textarea id="outputText" placeholder="Your formatted text will appear here..." readonly>
+        </textarea>
+
+            <button class="copy-btn" onclick="copyText()">
+                Copy Formatted Text
+            </button>
+
+
+            <!-- About -->
+
+            <h2>About This Tool</h2>
+
+            <p>
+                When text is copied from websites, documents, PDFs, emails,
+                or other applications, it can sometimes contain extra spaces,
+                unnecessary blank lines, or inconsistent formatting.
+            </p>
+
+            <p>
+                This text formatting tool provides a quick way to clean up
+                that content before you paste it into another document,
+                application, website, or message.
+            </p>
+
+
+            <!-- Features -->
+
+            <h2>Features</h2>
+
+            <div class="features">
+
+                <div class="feature">
+                    <strong>Remove Extra Spaces</strong>
+                    Cleans unnecessary spaces and tabs between words.
+                </div>
+
+                <div class="feature">
+                    <strong>Fix Line Breaks</strong>
+                    Removes excessive blank lines from copied text.
+                </div>
+
+                <div class="feature">
+                    <strong>Quick Copy</strong>
+                    Copy the cleaned text with one click.
+                </div>
+
+            </div>
+
+
+            <!-- How To Use -->
+
+            <h2>How to Use</h2>
+
+            <ol class="steps">
+                <li>Copy your messy or poorly formatted text.</li>
+                <li>Paste the text into the input box above.</li>
+                <li>Click the <strong>Format Text</strong> button.</li>
+                <li>Review the cleaned text.</li>
+                <li>Click <strong>Copy Formatted Text</strong> to use it anywhere.</li>
+            </ol>
+
+
+            <!-- Website Link -->
+
+            <div class="website">
+
+                <p>
+                    Looking for more ways to clean and organize your text?
+                    Explore <a href="https://cleantextlabs.com/" target="_blank" rel="noopener noreferrer">
+                        text formatting
+                    </a>
+                    tools at CleanTextLabs.
+                </p>
+
+            </div>
+
+        </section>
+
+        <footer>
+            Simple text formatting utility.
+        </footer>
+
+    </main>
+
+
+    <script>
+
+        function formatText() {
+
+            const input =
+                document.getElementById("inputText").value;
+
+            const formatted = input
+                .replace(/[ \t]+/g, " ")
+                .replace(/\n\s*\n+/g, "\n")
+                .trim();
+
+            document.getElementById("outputText").value =
+                formatted;
+        }
+
+
+        function clearText() {
+
+            document.getElementById("inputText").value = "";
+
+            document.getElementById("outputText").value = "";
+        }
+
+
+        function copyText() {
+
+            const output =
+                document.getElementById("outputText");
+
+            if (!output.value) {
+                return;
+            }
+
+            navigator.clipboard.writeText(output.value)
+                .then(() => {
+                    alert("Formatted text copied!");
+                })
+                .catch(() => {
+                    output.select();
+                    document.execCommand("copy");
+                    alert("Formatted text copied!");
+                });
+        }
+
+    </script>
+
+</body>
+
+</html>
